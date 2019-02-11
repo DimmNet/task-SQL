@@ -28,9 +28,5 @@ function search(string $searchTeam): array;
     $sth->execute(array(':search' => $searchTeam));
     $result = $sth->fetchAll();
 
-    if ($result !== false) {
-        return $result;
-    }
-
-    return false;
+    return $result;
 }
